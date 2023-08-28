@@ -74,7 +74,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                    "🤖 ᎫϴᏆΝ ႮᏢᎠᎪͲᎬՏ ᏟᎻᎪΝΝᎬᏞ", url=invite_link.invite_link
                 )
             ],
              [
@@ -88,9 +88,9 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton(" 🔄 ͲᎡᎽ ᎪᏀᎪᏆΝ", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton(" 🔄 ͲᎡᎽ ᎪᏀᎪᏆΝ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
             text="**ᏢᏞᎬᎪՏᎬ ᎫϴᏆΝ ᎷᎽ ႮᏢᎠᎪͲᎬՏ ᏟᎻᎪΝΝᎬᏞ Ͳϴ ႮՏᎬ ͲᎻᏆՏ ᏴϴͲ!**",
@@ -223,7 +223,7 @@ async def start(client, message):
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
         try:
             # Create the inline keyboard button with callback_data
-            button = InlineKeyboardButton('▶ Gen Stream / Download Link', callback_data=f'generate_stream_link:{file_id}')
+            button = InlineKeyboardButton('▶ ᏀᎬΝ ՏͲᎡᎬᎪᎷ / ᎠϴᏔΝᏞϴᎪᎠ ᏞᏆΝᏦ', callback_data=f'generate_stream_link:{file_id}')
             # Create the inline keyboard markup with the button
             keyboard = InlineKeyboardMarkup([[button]])
             msg = await client.send_cached_media(
@@ -260,7 +260,7 @@ async def start(client, message):
     if f_caption is None:
         f_caption = f"{files.file_name}"
 
-    button = InlineKeyboardButton('▶ Gen Stream / Download Link', callback_data=f'generate_stream_link:{file_id}')
+    button = InlineKeyboardButton('▶ ᏀᎬΝ ՏͲᎡᎬᎪᎷ / ᎠϴᏔΝᏞϴᎪᎠ ᏞᏆΝᏦ', callback_data=f'generate_stream_link:{file_id}')
     # Create the inline keyboard markup with the button
     keyboard = InlineKeyboardMarkup([[button]])
     await client.send_cached_media(
