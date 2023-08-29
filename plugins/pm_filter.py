@@ -60,7 +60,7 @@ async def rename(bot,update):
 	await update.message.reply_text("»»——— 𝙋𝙡𝙚𝙖𝙨𝙚 𝙚𝙣𝙩𝙚𝙧 𝙣𝙚𝙬 𝙛𝙞𝙡𝙚 𝙣𝙖𝙢𝙚...",	
 	reply_to_message_id=update.message.reply_to_message.id,  
 	reply_markup=ForceReply(True))  
-# Born to make history @LazyDeveloper !
+# Born to make history @za_updates !
 @Client.on_callback_query(filters.regex("upload"))
 async def doc(bot, update):
     type = update.data.split("_")[1]
@@ -153,7 +153,7 @@ async def doc(bot, update):
        os.remove(ph_path) 
 
 
-# Born to make history @LazyDeveloper !
+# Born to make history @iaszaidyt !
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
 
@@ -335,7 +335,7 @@ async def next_page(bot, query):
 
     btn.insert(0,
         [ 
-	    InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/LazyDeveloper')
+	    InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/za_updates')
         ] 
     )
 
@@ -371,7 +371,7 @@ async def next_page(bot, query):
         pass
     await query.answer()
 
-# Born to make history @LazyDeveloper !
+# Born to make history @za_updates !
 @Client.on_callback_query(filters.regex(r"^spolling"))
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
@@ -395,7 +395,7 @@ async def advantage_spoll_choker(bot, query):
             await asyncio.sleep(10)
             await k.delete()
 
-# Born to make history @LazyDeveloper !
+# Born to make history @za_updates !
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
     data = query.data
@@ -414,20 +414,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('♥️ Love @LazyDeveloper ♥️')
+                    return await query.answer('♥️ Love @iaszaidyt ♥️')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+                return await query.answer('♥️ Thank You IAS ZAID YT ♥️')
 
         elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+            return await query.answer('♥️ Thank You IAS ZAID YT ♥️')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
@@ -481,7 +481,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode=enums.ParseMode.MARKDOWN
         )
-        return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+        return await query.answer('♥️ Thank You IAS ZAID YT ♥️')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -502,7 +502,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode=enums.ParseMode.MARKDOWN)
-        return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+        return await query.answer('♥️ Thank You IAS ZAID YT ♥️')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -525,7 +525,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+        return await query.answer('♥️ Thank You IAS ZAID YT ♥️')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -543,7 +543,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+        return await query.answer('♥️ Thank You IAS ZAID YT ♥️')
     elif query.data == "backcb":
         await query.answer()
 
@@ -554,7 +554,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('♥️ Thank You LazyDeveloper ♥️')
+            return await query.answer('♥️ Thank You IAS ZAID YT ♥️')
         buttons = []
         for groupid in groupids:
             try:
@@ -671,15 +671,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕↖️ ᎪᎠᎠ ᎷᎬ Ͳϴ ᎽϴႮᎡ ᏀᎡϴႮᏢՏ ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
+            InlineKeyboardButton('🧞‍♀️ ՏᎬᎪᎡᏟᎻ 🧐', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🔔 ႮᏢᎠᎪͲᎬՏ 🤖', url='https://t.me/za_updates')
         ], [
-            InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
-            InlineKeyboardButton('♥️ About ♥️', callback_data='about')
+            InlineKeyboardButton('🙆🏻 ᎻᎬᏞᏢ 🦾', callback_data='help'),
+            InlineKeyboardButton('♥️ ᎪᏴϴႮͲ ♥️', callback_data='about')
         ],[
-            InlineKeyboardButton('Watch Tutorial', url='https://youtube.com/LazyDeveloper')
+            InlineKeyboardButton('', url='')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
